@@ -77,7 +77,7 @@ Dentro de los programas, sea cual sea el lenguaje usado, existe un concepto muy 
 
 En la imagen que sigue vemos dos scopes diferentes, representados por rectángulos:
 
-![GitHub Logo](/assets/images/javascript/scopes.png)
+![scopes](./assets/images/javascript/scopes.png)
 
 Inicialmente una determinada variable solamente es visible en el scope en la que fue creada y en los scopes inferiores.
 
@@ -167,7 +167,7 @@ Aquí mostramos el diagrama de jerarquía de tipos de javascript.
 
 Estos tipos son mutables, quere decir que podemos modificar parte de su contenido.
 
-![Javascript types](/assets/images/javascript/javascript-types.png)
+![Javascript types](./assets/images/javascript/javascript-types.png)
 
 Algunos tipos venen con las nuevas especificaciones de Javascript, que veremos en apartados posteriores.
 ___
