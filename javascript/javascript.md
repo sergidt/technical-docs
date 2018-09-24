@@ -2,7 +2,7 @@
 
 # Javascript
 
-En este apartado exploraremos los aspectos referentes a Javascript en su especificación ECMAScript 5, la cual constituye el Javascript más puro, en su totalidad.
+En este apartado exploraremos los aspectos referentes a Javascript en su especificación ECMAScript 5, la cual constituye el Javascript más puro.
 
 En futuros apartados veremos las posteriores especificaciones, de ECMAScript 6 (2015), en adelante, para conocer todos los añadidos que se han ido incluyendo a lo largo de las especificaciones y que son totalmente soportadas en la gran mayoría de browsers actuales.
 
@@ -131,6 +131,11 @@ de más de una línea */
 
 En este apartado exploraremos los tipos y estructuras de datos disponibles en Javascript.
 
+No veremos las infinitas posibilidades de cada uno de los tipos, solamente expondremos las características principales de los mismos.
+
+> Para más información sobre los tipos tenemos este enlace: [Tipos de datos y estructuras en Javascript](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures)
+
+
 ### [Tipado dinámico](#tipado-dinamico)
 
 Javascript es un lenguaje de tipado dinámico, es decir, no podemos determinar el tipo de una variable en su declaración, quedará tipada en el momento que se le asigne un valor, pero podemos reasignarle el tipo. Veamos unos ejemplos comentados:
@@ -184,3 +189,87 @@ Comparado con **undefined**, si usamos bien este tipo, nos permite saber que una
 
 A una variable que tiene contenido podemos asignarle **undefined**, pero no es considerado una buena práctica, si queremos indicar que no tiene valor debemos usar **null**, el valor **undefined** debería ser asignado únicamente por el lenguaje, cuando una variable es declarada pero no ha recibido ningún valor asignado.
 
+#### [number](#number)
+
+Javascipt representa los números, ya sean enteros o de punto flotante, mediante el tipo number. Para Javascript cualquier número es de punto flotante, con hasta una longitud de 64 bits.
+
+Los enteros son considerados como punto flotante también, pero sin decimales, es decir:
+
+```javascript
+100 === 100.0 // Sí, son el mismo valor.
+```
+
+Los números en pueden ser expresados en base 10:
+
+```javascript
+5e2 // es lo mismo que 500
+
+3e-2 // = 0.03
+```
+
+##### [NaN](#NaN)
+
+Una variable numérica en Javascript puede tener el valor **NaN**. NaN significa "Not a Number", es decir, el valor recibido no se corresponde con un valor numérico.
+
+**¿Cómo se puede obtener el valor NaN?**
+
+De distintas maneras y no es algo raro.
+Por ejemplo, si intentamos convertir una cadena de caracteres a número, por ejemplo, tendremos que el valor resultante será un NaN:
+
+```javascript
+var num = Number('3a');
+```
+
+**Comprovación de NaN**
+
+Podemos comprobar si una variable es NaN usando la función isNaN:
+
+```javascript
+var num = Number('3a');
+isNaN(num); // nos dice true
+```
+
+Es importante saber o comprobar si nuestras variables númericas son NaN porque cualquier operación entre un valor numérico y NaN será siempre NaN.
+
+**Otras funciones del tipo number**
+
+El tipo number nos da otras funcionalidades interesantes, que no se usan tanto, pero necesarias en ciertos escenarios:
+
+- Number.MAX_VALUE
+- Number.MIN_VALUE
+- Number.POSITIVE_INFINITY
+- Number.NEGATIVE_INFINITY
+- parseInt(): intenta convertir un valor a entero
+- parseFloat(): intenta convertir un valor a punto flotante
+- isFinite()
+- isInteger()
+- ...
+
+##### [Infinity](#infinity)
+
+El tipo number nos proporciona el valor Infinity, para trabajar con infinitos. Podemos usarlo positiva o negativamente, si lo prefijamos con el signo -:
+
+```javascript
+var infinity = Infinity;
+isFinite(infinity); // false
+```
+
+#### [string](#string)
+
+El tipo string nos permite representar texto, ya sea uno o más carateres. Estos caracteres deben ir entre comillas (dobles o simples):
+
+```javascript
+var text = 'esto es texto';
+var text2 = "esto también es texto";
+```
+
+**Funciones del tipo string**
+
+El tipo string nos proporciona funciones muy interesantes para manejar valores, sean o no strings:
+
+- length: para saver la longitud de una cadena de texto
+- toLowerCase()
+- toUpperCase()
+- trim(): quita los espacios en blanco extras
+- concat(): concatena dos strings
+- ...

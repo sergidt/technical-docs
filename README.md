@@ -22,10 +22,10 @@ Documentos técnicos sobre diferentes tecnologías.
 - [Tipos primitivos](javascript/javascript.md#tipos-primitivos)
   - [undefined](javascript/javascript.md#undefined)
   - [null](javascript/javascript.md#null)
-  - Number
-    - NaN
-  - String
-    - Propiedades y operaciones  
+  - [number](javascript/javascript.md#number)
+    - [NaN](javascript/javascript.md#NaN)
+    - [Infinity](javascript/javascript.md#infinity)
+  - [string](javascript/javascript.md#string)
   - Boolean
   - Object
     - Mutabilidad
@@ -39,4 +39,3 @@ Documentos técnicos sobre diferentes tecnologías.
 - Date
 - Function
 - El objeto Math
-
