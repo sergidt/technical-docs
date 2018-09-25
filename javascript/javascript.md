@@ -273,3 +273,35 @@ El tipo string nos proporciona funciones muy interesantes para manejar valores, 
 - trim(): quita los espacios en blanco extras
 - concat(): concatena dos strings
 - ...
+
+#### [boolean](#boolean)
+
+El tipo boolean nos permite distinguir entre 2 valores opuestos: **true** y **false**.
+
+Con este tipo podemos evaluar condiciones que pueden producirse al combinar valores boolean o por comparación de otros tipos. Veamos unos ejemplos:
+
+```javascript
+30 > 29 // nos dará el valor true
+
+"javascript".length < 4 // false
+
+
+true == false // false, obviamente
+```
+
+#### [object](#object)
+
+Un object representa una colección de propiedad/valor. Veamos un ejemplo creando un objeto para representar un vehículo: 
+
+```javascript
+
+var car = {
+    numberOfWheels: 4,
+    numberOfDoors: 5,
+    model: 'Mercedes',
+    numberPlate: 'CBK1020'
+};
+```
+
+Los objetos se pueden crear de distintas maneras. Una de ellas es la que hemos visto en el ejemplo anterior, entre brackets {}. Cuando lo creamos de esta manera, las propiedades tienen que ir separados por comas.
+

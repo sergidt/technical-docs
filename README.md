@@ -26,8 +26,8 @@ Documentos técnicos sobre diferentes tecnologías.
     - [NaN](javascript/javascript.md#NaN)
     - [Infinity](javascript/javascript.md#infinity)
   - [string](javascript/javascript.md#string)
-  - Boolean
-  - Object
+  - [boolean](javascript/javascript.md#boolean)
+  - [object](javascript/javascript.md#object)
     - Mutabilidad
     - Encapsulación
     - Métodos
