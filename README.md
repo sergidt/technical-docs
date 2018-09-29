@@ -28,7 +28,7 @@ Documentos técnicos sobre diferentes tecnologías.
   - [string](javascript/javascript.md#string)
   - [boolean](javascript/javascript.md#boolean)
   - [object](javascript/javascript.md#object)
-    - Mutabilidad
+    - [Mutabilidad](javascript/javascript.md#mutabilidad)
     - Encapsulación
     - Métodos
     - Getters, setters

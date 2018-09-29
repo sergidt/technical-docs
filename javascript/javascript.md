@@ -291,10 +291,9 @@ true == false // false, obviamente
 
 #### [object](#object)
 
-Un object representa una colección de propiedad/valor. Veamos un ejemplo creando un objeto para representar un vehículo: 
+Un object representa una colección de propiedad/valor. Veamos un ejemplo creando un objeto para representar un vehículo:
 
 ```javascript
-
 var car = {
     numberOfWheels: 4,
     numberOfDoors: 5,
@@ -303,5 +302,79 @@ var car = {
 };
 ```
 
-Los objetos se pueden crear de distintas maneras. Una de ellas es la que hemos visto en el ejemplo anterior, entre brackets {}. Cuando lo creamos de esta manera, las propiedades tienen que ir separados por comas.
+Los objetos se pueden crear de distintas maneras. Una de ellas es la que hemos visto en el ejemplo anterior, entre brackets {}. Cuando lo creamos de esta manera, las propiedades tienen que ir separados por comas y pueden ser de cualquier tipo, incluso otros objetos.
+
+Los objetos pueden ser modificados: podemos acceder a una de sus propiedades y cambiar el valor. Por ejemplo:
+
+```javascript
+var person = {
+    name: 'john'
+    age: 63
+};
+
+// modifiquemos su edad:
+
+person.age = 64;
+```
+
+Ahora la propiedad age del objeto erson tiene el valor 64. Para acceder a las propiedades de un objeto lo podemos hacer mediante el operador **.** o mediante llaves:
+
+```javascript
+
+var person = {
+    name: 'john'
+    age: 63
+};
+
+// modifiquemos su edad con el operador punto:
+
+person.age = 64;
+
+// modifiquemos su edad accediento con llaves:
+
+person['age'] = 65;
+```
+
+Al hacerlo con llaves debemos determinar la propiedad deseada entre comillas.
+
+##### [Mutabilidad](#mutabilidad)
+
+Ya hemos comentado anteriormente que los tipos primitivos son immutables, si a una variable que alberga un tipo primitivo le cambiamos el valor, realmente este valor es un nuevo objeto.
+
+Los objetos funcionan de manera distinta, por el hecho de ser estructuras de datos. Si cambiamos sus propiedades usando alguno de los métodos vistos anteriormente, estamos cambiando los valores de estas propiedades, pero el objeto continúa siendo el mismo, la variable que tiene asignada este objeto continúa apuntando a la misma posición de memmoria.
+
+Los objetos se comparan por referencia, es decir que al compararlos se mira si las posiciones en memoria son las mismas.
+
+Veamos algunos ejemplos:
+
+```javascript
+let o1 = {prop: 10};
+let o2 = o1;
+let o3 = {prop: 10};
+
+// si preguntamos: 
+
+o2 === o1 // la respuesta es true (apuntan a la misma posición de memoria después de asignar o2 = o1)
+
+o2 === o3 // false, aunque tienen el mismo contenido, apuntan a distintas posiciones de memoria
+```
+
+A este proceso de cambiar propiedades de un objeto sin cambiar su referencia es lo que se conoce como mutabilidad de datos: tenemos un objeto al cual le cambiamos los datos.
+
+La mutabilidad se considera, en muchos paradigmas, una mala práctica ya que si estamos pendientes de un objeto y se puede cambiar su contenido sin modificar su referencia en memoria, puede tener efectos adversos en nuestros programas.
+
+Es por eso que se recomienda que para cambiar una propiedad de un objeto, se cree un objeto nuevo con el contenido del anterior y la nueva propiedad, de esta manera cambiamos su referencia en memoria y mantenemos los datos immutables, ya que estamos trabajando cn un nuevo objeto:
+
+```javascript
+var o1 = {value: 10};
+
+// cambiamos el valor de la propiedad value:
+
+var o2 = Object.create(o1);
+
+o2 === o1 // false
+
+o2.value = 20; // podemos modificar o2 sin modificar o1 porque otra referencia en memoria
+
+```
 
