@@ -39,3 +39,37 @@ Documentos técnicos sobre diferentes tecnologías.
 - Date
 - Function
 - El objeto Math
+
+# ES6
+
+- Const/Let
+- Map/Set y WeakMap/WeakSet
+- Iterators
+- Generators
+- modules
+- Template Strings
+- Arrow Functions
+- Fat Arrow Functions
+- Uso avanzado de las Arrow Functions
+- Cuando usar Arrow Functions
+- Argumentos por defecto en las funciones
+- Operadores Rest y Spread
+  - Spread y Arrays
+  - Combinando Rest y Spread
+- Symbols
+- Destructuración
+  - Destructuración de objetos
+  - Destructuración de arrays
+- Clases
+- JavaScript asíncrono
+  - Ejemplos de JavaScript asíncrono
+  - Understying Asynchronous JavaScript: The Event Loop
+  - Asincronía a la vieja usanza: con callbacks
+- solución al Callback Hell: Promises
+  - Creación de Promises
+  - AJAX y APIs
+  - Llamadas AJAX con Fetch y Promises
+  - Promises y Fetch
+  - Then y Catch
+- Simplificando las Promises con Async/Await
+  - Llamadas AJAX con Fetch y Async/Await
